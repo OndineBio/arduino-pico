@@ -237,8 +237,8 @@ const uint8_t *USBClass::tud_descriptor_device_cb() {
         .idVendor = _forceVID ? _forceVID : (uint16_t)USBD_VID,
         .idProduct = _forcePID ? _forcePID : (uint16_t)USBD_PID,
         .bcdDevice = 0x0100,
-        .iManufacturer = _forceManuf ? _forceManuf : USB.registerString(USB_MANUFACTURER),
-        .iProduct = _forceProd ? _forceProd : USB.registerString(USB_PRODUCT),
+        .iManufacturer = _forceManuf ? _forceManuf : USB.registerString("Ondine"),
+        .iProduct = _forceProd ? _forceProd : USB.registerString("Adjustable Laser"),
         .iSerialNumber = _forceSerial ? _forceSerial : USB.registerString(idString),
         .bNumConfigurations = 1
     };
